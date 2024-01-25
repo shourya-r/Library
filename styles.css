@@ -32,6 +32,34 @@ body{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.15s;
 }
 
+.login-button:hover{
+    background-color:rgb(205, 202, 202) ;
+}
+
+.add-book-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-book{
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(237, 234, 234);
+    border-radius: 10px;
+    transition: background-color 0.15s;
+    cursor: pointer;
+}
+
+.add-book:hover{
+    background-color:rgb(205, 202, 202);
+}
 
