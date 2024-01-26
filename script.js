@@ -25,8 +25,8 @@ addBookToLibrary(book3);
 // Getting reference to the book grid and adding a function to make cards and display all the books 
 const bookGrid = document.querySelector(".book-grid");
 function displayAllBooks(){
+    // Removing all the book divs first before iterating through all the divs
     const bookDivs = document.querySelectorAll(".book-div");
-    console.log(bookDivs);
     for(let book of bookDivs){
         bookGrid.removeChild(book);
     }
@@ -35,6 +35,9 @@ function displayAllBooks(){
         const bookDiv = document.createElement('div');
         bookDiv.classList.toggle("book-div");
         
+        // Giving index data attribute to all the cards
+        bookDiv.dataset.index = i;
+
         // Book Title
         const bookTitle = document.createElement('div');
         bookTitle.textContent = `"${myLib[i]["title"]}"`;
@@ -65,6 +68,25 @@ function displayAllBooks(){
             bookReadStatus.classList.toggle("book-not-read");
         }
 
+        // Adding an event listener to the bookReadStatus button
+        bookReadStatus.addEventListener("click", ()=>{
+            bookReadStatus.classList.toggle("book-read");
+            bookReadStatus.classList.toggle("book-not-read");
+            if(bookReadStatus.textContent==="Read"){
+                bookReadStatus.textContent = "Not read";
+            }
+            else{
+                bookReadStatus.textContent = "Read";
+            }
+            // Need to change the read status in lib array
+            if(myLib[bookReadStatus.parentNode.parentNode.dataset.index]["readStatus"]==="read"){
+                myLib[bookReadStatus.parentNode.parentNode.dataset.index]["readStatus"]="not read";
+            }
+            else{
+                myLib[bookReadStatus.parentNode.parentNode.dataset.index]["readStatus"]="read";
+            }
+            console.log(myLib[bookReadStatus.parentNode.parentNode.dataset.index]["readStatus"]);
+        });
         // Remove book button
         const bookRemoveDiv = document.createElement("div");
         bookRemoveDiv.classList.toggle("book-remove-div");
@@ -124,6 +146,4 @@ const addBookButton = document.querySelector(".add-book");
 // Adding an event listener to the add book button
 addBookButton.addEventListener("click", ()=>{
     addBookModal.showModal();
-});
-
-
+})
