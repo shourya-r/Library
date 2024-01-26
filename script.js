@@ -137,7 +137,7 @@ submitButton.addEventListener("click",()=>{
         pagesInput.value,
         readStatus
     )
-    myLib.push(newBook);
+    addBookToLibrary(newBook);
     titleInput.value = "";
     authorInput.value = "";
     pagesInput.value = "";
