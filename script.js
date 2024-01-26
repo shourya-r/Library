@@ -14,14 +14,6 @@ function addBookToLibrary(book){
     myLib.push(book);
 }
 
-const book1 = new Book("Harry Potter", "JK Rowling", 295, "read");
-const book2 = new Book("Lord of the Rings", "JRR Tolkien", 295, "read");
-const book3 = new Book("Charlie and the Factory", "Roald Dahl", 295, "not read");
-
-addBookToLibrary(book1);
-addBookToLibrary(book2);
-addBookToLibrary(book3);
-
 // Getting reference to the book grid and adding a function to make cards and display all the books 
 const bookGrid = document.querySelector(".book-grid");
 function displayAllBooks(){
@@ -85,7 +77,6 @@ function displayAllBooks(){
             else{
                 myLib[bookReadStatus.parentNode.parentNode.dataset.index]["readStatus"]="read";
             }
-            console.log(myLib[bookReadStatus.parentNode.parentNode.dataset.index]["readStatus"]);
         });
         // Remove book button
         const bookRemoveDiv = document.createElement("div");
