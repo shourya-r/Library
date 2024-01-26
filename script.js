@@ -95,6 +95,12 @@ function displayAllBooks(){
         bookRemove.textContent = "Remove";
         bookRemove.classList.toggle("book-remove");
 
+        // Adding an event listener to the remove book button
+        bookRemove.addEventListener("click", ()=>{
+            myLib.splice(bookRemove.parentNode.parentNode.dataset.index,1);
+            displayAllBooks();
+        });
+
         bookDiv.appendChild(bookTitle);
         bookDiv.appendChild(bookAuthor);
         bookDiv.appendChild(bookPages);
