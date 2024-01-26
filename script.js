@@ -25,6 +25,11 @@ addBookToLibrary(book3);
 // Getting reference to the book grid and adding a function to make cards and display all the books 
 const bookGrid = document.querySelector(".book-grid");
 function displayAllBooks(){
+    const bookDivs = document.querySelectorAll(".book-div");
+    console.log(bookDivs);
+    for(let book of bookDivs){
+        bookGrid.removeChild(book);
+    }
     for(let i = 0; i<myLib.length; i++){
         // Book Card div
         const bookDiv = document.createElement('div');
@@ -89,5 +94,28 @@ const titleInput = document.querySelector(".title-input");
 const authorInput = document.querySelector(".author-input");
 const pagesInput = document.querySelector(".pages-input");
 const readCheck = document.querySelector(".check-mark");
+
+submitButton.addEventListener("click",()=>{
+    let readStatus;
+    if(readCheck.checked){
+        readStatus = "read";
+    }
+    else{
+        readStatus = "not read";
+    }
+    const newBook = new Book(
+        titleInput.value,
+        authorInput.value,
+        pagesInput.value,
+        readStatus
+    )
+    myLib.push(newBook);
+    titleInput.value = "";
+    authorInput.value = "";
+    pagesInput.value = "";
+    readCheck.checked = false;
+    displayAllBooks();
+    addBookModal.close();
+});
 
 
