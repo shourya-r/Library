@@ -110,6 +110,11 @@ body{
     padding-top: 8px;
     padding-bottom: 8px;
     cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.book-read:hover{
+    background-color: rgb(107, 222, 107);
 }
 
 .book-not-read{
@@ -122,6 +127,11 @@ body{
     padding-top: 8px;
     padding-bottom: 8px;
     cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.book-not-read:hover{
+    background-color: rgb(229, 97, 97);
 }
 
 .book-remove-div{
@@ -140,6 +150,10 @@ body{
     padding-top: 8px;
     padding-bottom: 8px;
     cursor: pointer;
+    transition: background-color 0.15s;
+}
+.book-remove:hover{
+    background-color: rgb(186, 185, 185);
 }
 
 .add-book-modal{
