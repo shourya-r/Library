@@ -86,7 +86,7 @@ function displayAllBooks(){
 
 displayAllBooks();
 const addBookModal = document.querySelector(".add-book-modal");
-addBookModal.showModal();
+
 
 //Getting references to the elements of the input modal
 const submitButton = document.querySelector(".submit-book-button");
@@ -116,6 +116,14 @@ submitButton.addEventListener("click",()=>{
     readCheck.checked = false;
     displayAllBooks();
     addBookModal.close();
+});
+
+// Adding reference to the add book button 
+const addBookButton = document.querySelector(".add-book");
+
+// Adding an event listener to the add book button
+addBookButton.addEventListener("click", ()=>{
+    addBookModal.showModal();
 });
 
 
