@@ -109,6 +109,7 @@ body{
     font-size: 21px;
     padding-top: 8px;
     padding-bottom: 8px;
+    cursor: pointer;
 }
 
 .book-not-read{
@@ -120,6 +121,7 @@ body{
     font-size: 21px;
     padding-top: 8px;
     padding-bottom: 8px;
+    cursor: pointer;
 }
 
 .book-remove-div{
@@ -137,5 +139,58 @@ body{
     font-size: 21px;
     padding-top: 8px;
     padding-bottom: 8px;
+    cursor: pointer;
 }
+
+.add-book-modal{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(237, 235, 235);
+    padding: 25px;
+}
+
+.add-book-modal::backdrop{
+    background-color: grey;
+    opacity: 0.6;
+}
+.add-new-book-text{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.input-box{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.read-or-not{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-mark{
+    margin-left: 10px;
+    height: 20px;
+}
+
+.submit-book-button{
+    background-color: lightgreen;
+    width: 260px;
+    margin-top: 15px;
+    font-size: 20px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 
