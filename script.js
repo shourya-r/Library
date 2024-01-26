@@ -80,4 +80,14 @@ function displayAllBooks(){
 }
 
 displayAllBooks();
+const addBookModal = document.querySelector(".add-book-modal");
+addBookModal.showModal();
+
+//Getting references to the elements of the input modal
+const submitButton = document.querySelector(".submit-book-button");
+const titleInput = document.querySelector(".title-input");
+const authorInput = document.querySelector(".author-input");
+const pagesInput = document.querySelector(".pages-input");
+const readCheck = document.querySelector(".check-mark");
+
 

@@ -160,7 +160,9 @@ body{
     text-align: center;
 }
 
-.input-box{
+.title-input,
+.author-input,
+.pages-input{
     display: block;
     font-size: 20px;
     padding: 10px;
@@ -191,6 +193,10 @@ body{
     padding-bottom: 10px;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.15s;
 }
 
+.submit-book-button:hover{
+    background-color: rgb(107, 222, 107);
+}
 
