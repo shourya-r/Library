@@ -1,12 +1,14 @@
 // Making an array to store the book objects
 const myLib = [];
 
-// Making a constructor for the book object
-function Book(title, author, pages, readStatus){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.readStatus = readStatus;
+// Defining a book class
+class Book{
+    constructor(title, author, pages, readStatus){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.readStatus = readStatus;
+    }
 }
 
 // Adding a created object to the library
